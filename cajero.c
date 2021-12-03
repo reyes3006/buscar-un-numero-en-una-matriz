@@ -6,8 +6,11 @@ int saldo=4500;
     printf("Inserta su tarjeta\n");
 
                 while (cont<3&& corr==0){
-                        printf("\ningresa tu NIP\n");
+                        printf("\ningresa tu NIP\n\n");
+
+                            private:
                         scanf("%d",&n);
+
                         system("cls");
                                 if(nip==n) {
                                         printf("tu NIP es correcto\n");
@@ -32,15 +35,15 @@ int saldo=4500;
                                     printf("\n3.Consultar tu saldo\n");
                                     printf("\n4.Enviar dinero\n");
                                     printf("\n5.Pagar un servicio\n");
-                                    printf("\n6.Salir\n");
-                                    scanf("%d",&proc);
+                                    printf("\n6.Salir\n\n");
+                                    scanf("\n%d",&proc);
                                     system("cls");
                                     switch(proc){
 
                                             case 1:{
                                                     int abono;
                                                         printf("Cuanto deseas abonar?\n");
-                                                        scanf("%d",&abono);
+                                                        scanf("\n%d",&abono);
                                                         saldo=abono+saldo;
                                                         printf("Usted acaba de  de abonar %d a su cuenta,su saldo es: %d\n",abono,saldo);
                                                     break;
@@ -50,7 +53,7 @@ int saldo=4500;
                                                     int retiro;
                                                         printf("\n\t     Su saldo actual es %d\n",saldo);
                                                         printf("Cual es la cantidad que desea retirar?\n");
-                                                        scanf("%d",&retiro);
+                                                        scanf("\n%d",&retiro);
 
                                                     if(retiro>saldo){
 
@@ -72,9 +75,9 @@ int saldo=4500;
                                                     int cuenta,cant;
                                                     printf("\n\t     Su saldo actual es %d\n",saldo);
                                                     printf("Ingrese el N. de cuenta/CLABE INTERBANCARIA/Tarjeta de debito\n");
-                                                    scanf("%d",&cuenta);
+                                                    scanf("\n%d",&cuenta);
                                                     printf("Cual es la cantidad que quiere enviar?\n");
-                                                    scanf("%d",&cant);
+                                                    scanf("\n%d",&cant);
                                                         if(cant>saldo){
                                                             printf("Lo sentimos, no cuenta con ese saldo %d\n",cant);
                                                         }
@@ -85,16 +88,17 @@ int saldo=4500;
                                                     break;
                                             }
                                             case 5:{
-                                                printf("\n\t     Su saldo actual es %d\n",saldo);
+                                                printf("\n\t         Su saldo actual es %d\n\n",saldo);
                                                 int salir=0;
                                                 while(salir==0){
                                                     int ser;
-                                                    printf("\n\t     Elija el servicio que desea pagar\n");
+                                                    printf("\n\t     Elija el servicio que desea pagar\n\n");
                                                     printf("\n1.Pago de recibo de agua\n");
                                                     printf("\n2.Pago de recibo de luz\n");
                                                     printf("\n3.Pago de servicio de telefonia\n");
                                                     printf("\n4.Volver al menu anterior\n");
-                                                    scanf("%d",&ser);
+                                                    printf("\n5.Salir\n\n");
+                                                    scanf("\n\n%d",&ser);
                                                     system("cls");
 
                                                             switch(ser) {
@@ -102,7 +106,7 @@ int saldo=4500;
 
                                                                     case 1:{
                                                                             printf("Ingresa el N.de servicio\n");
-                                                                            scanf("%d",&nser);
+                                                                            scanf("v%d",&nser);
                                                                             printf("Cual es el monto a pagar?\n");
                                                                             scanf("%d",&pago);
                                                                              if(pago>saldo){
@@ -123,13 +127,13 @@ int saldo=4500;
 
                                                                     case 2:{
                                                                             printf("Ingresa el N.de servicio\n");
-                                                                            scanf("%d",&nser);
-                                                                            printf("Cual es el monto de pago?\n");
-                                                                            scanf("%d",&pago);
+                                                                            scanf("\n%d",&nser);
+                                                                            printf("\nCual es el monto de pago?\n");
+                                                                            scanf("\n%d",&pago);
 
                                                                             if(pago>saldo){
                                                                             system("cls");
-                                                                                printf("Lo sentimos, no cuenta con ese saldo %d\n",pago);
+                                                                                printf("\nLo sentimos, no cuenta con ese saldo %d\n",pago);
                                                                             }
 
                                                                             else{
@@ -144,7 +148,7 @@ int saldo=4500;
 
                                                                     case 3:{
                                                                             printf("Ingresa el N.de servicio\n");
-                                                                            scanf("%d",&nser);
+                                                                            scanf("\n%d",&nser);
                                                                             printf("Cual es el monto de pago?\n");
 
                                                                             scanf("%d",&pago);
@@ -168,6 +172,10 @@ int saldo=4500;
                                                                         salir=1;
                                                                         break;
                                                                     }
+                                                                    case 5:{
+                                                                    printf("Gracias por su eleccion, vuelva pronto\n");
+                                                                    return 0;
+                                                                    }
 
                                                                     default:{
                                                                         printf("Elige una opcion valida\n");
@@ -187,7 +195,7 @@ int saldo=4500;
                                                     break;
                                                     }
                                             default:{
-                                                    printf("Elige una opcion valida");
+                                                    printf("Elige una opcion valida\n");
                                             }
                                     }
                                 system("PAUSE");
